@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS `tour` (
   `date` DATE,
   `duration` TIME,
   `startlocation` VARCHAR(255),
+  `image` VARCHAR(255),
   `userid` INT(10) unsigned NOT NULL,
   `regionid` INT(10) unsigned NOT NULL,
   `difficultyid` INT(10) unsigned NOT NULL,
