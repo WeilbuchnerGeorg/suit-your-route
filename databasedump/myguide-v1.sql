@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` VARCHAR(255) NOT NULL,
   `firstname` VARCHAR(255),
   `lastname` VARCHAR(255),
+  `image` VARCHAR(255),
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
