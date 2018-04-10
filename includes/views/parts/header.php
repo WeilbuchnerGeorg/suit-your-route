@@ -38,9 +38,8 @@
         </a>
       </div>
       
-      <?php if(LOGGED_IN == true): ?>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" <?php if($this->current == "uebersicht"): ?>class="active"<?php endif; ?>>Startseite</a></li>
+        <li><a href="uebersicht" <?php if($this->current == "uebersicht"): ?>class="active"<?php endif; ?>>Startseite</a></li>
         <?php if(LOGGED_IN == true): ?>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mein Profil <span class="caret"></span></a>
