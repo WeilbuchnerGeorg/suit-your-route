@@ -34,13 +34,13 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/myguide">
           myguide
         </a>
       </div>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="uebersicht" <?php if($this->current == "uebersicht"): ?>class="active"<?php endif; ?>>Startseite</a></li>
+        <li><a href="/myguide" <?php if($this->current == "index"): ?>class="active"<?php endif; ?>>Startseite</a></li>
         <?php if(LOGGED_IN == true): ?>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mein Profil <span class="caret"></span></a>
