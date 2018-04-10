@@ -50,17 +50,6 @@ header {
     }
 
 
-
-    &::after {
-        content: '';
-        display: block;
-        height: 10px;
-        width: 100%;
-        background-color:$lineColor;
-        margin-top:5px;
-    }
-
-    margin-bottom:20px;
 }
 
 

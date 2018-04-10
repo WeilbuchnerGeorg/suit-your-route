@@ -13,6 +13,7 @@
 	<?php endif; ?>
 
 		<link href="css/main.css" rel="stylesheet">
+		<link href="css/myguide.css" rel="stylesheet">
 
 
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -50,7 +51,7 @@
             </ul>
           </li>
         <?php else: ?>
-					<li<?php if($this->current == "login"): ?>class="active"<?php endif; ?>><a href="login">Login</a></li>
+					<li <?php if($this->current == "login"): ?>class="active"<?php endif; ?>><a href="login">Login</a></li>
         <?php endif; ?>
 
       </ul> 

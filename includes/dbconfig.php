@@ -1,6 +1,6 @@
 <?php
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'testdatabase');
-define('DB_USER', 'testuser');
-define('DB_PASS', 'testpass');
+define('DB_NAME', 'myguide');
+define('DB_USER', 'myguide');
+define('DB_PASS', 'myguide');

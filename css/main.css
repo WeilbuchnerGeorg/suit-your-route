@@ -10,10 +10,6 @@
   }
 }
 
-/* line 21, ../scss/main.scss */
-header {
-  margin-bottom: 20px;
-}
 /* line 22, ../scss/main.scss */
 header .inner {
   margin: 0 auto;
@@ -46,12 +42,13 @@ header .inner .logo .version::before {
     width: 990px;
   }
 }
-/* line 54, ../scss/main.scss */
-header::after {
-  content: '';
-  display: block;
-  height: 10px;
-  width: 100%;
-  background-color: #337ab7;
-  margin-top: 5px;
+
+/* line 56, ../scss/main.scss */
+.toast-success {
+  background-color: #dff0d8;
+}
+
+/* line 57, ../scss/main.scss */
+.toast-error {
+  background-color: #f2dede;
 }
