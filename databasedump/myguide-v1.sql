@@ -63,11 +63,11 @@ CREATE TABLE IF NOT EXISTS `tour` (
   FOREIGN KEY(activityid) REFERENCES activity(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-TRUNCATE TABLE `tour`;
-INSERT INTO `tour` (`id`, `name`, `description`, `date`, `duration`, `startlocation`, `image`, `userid`, `regionid`, `difficultyid`, `ratingid`, `activityid`) VALUES
-(1, '', '', , , '', '', , , , ,);
 
-TRUNCATE TABLE `user`;
+
+
+
+/*TRUNCATE TABLE `user`;*/
 INSERT INTO `user` (`id`, `name`, `password`, `firstname`, `lastname`, `image`) VALUES
 (1,'Benutzername','$2y$10$7Z3Iq0Zl.WIiNH7t8bk39OYVp3T6ICb2dF7yYAhhEaUMiFKbh3apq', 'Josef','Brombeer', '')
   ,(2,'Georg','$2y$10$7Z3Iq0Zl.WIiNH7t8bk39OYVp3T6ICb2dF7yYAhhEaUMiFKbh3apq','Georg','Weilbuchner', '')
@@ -83,14 +83,14 @@ INSERT INTO `user` (`id`, `name`, `password`, `firstname`, `lastname`, `image`) 
 	,(12,'Andrea','$2y$10$7Z3Iq0Zl.WIiNH7t8bk39OYVp3T6ICb2dF7yYAhhEaUMiFKbh3apq','Andrea','Stich', '')
 	,(13,'Marco','$2y$10$7Z3Iq0Zl.WIiNH7t8bk39OYVp3T6ICb2dF7yYAhhEaUMiFKbh3apq','Marco','Wilhelm', '');
 
-TRUNCATE TABLE `region`;
+/*TRUNCATE TABLE `region`;*/
 INSERT INTO `region` (`id`, `name`) VALUES
 	 (1, 'Wilder Kaiser')
 	,(2, 'Kitzbuehler Alpen')
 	,(3, 'Berchtesgadener Alpen')
 	,(4, 'Salzkammergut');
 
-TRUNCATE TABLE `difficulty`;
+/*TRUNCATE TABLE `difficulty`;*/
 INSERT INTO `difficulty` (`id`, `name`) VALUES
    (1, 'sehr einfach')
 	,(2, 'einfach')
@@ -98,7 +98,7 @@ INSERT INTO `difficulty` (`id`, `name`) VALUES
 	,(4, 'schwer')
 	,(5, 'sehr schwer');
 
-TRUNCATE TABLE `rating`;
+/*TRUNCATE TABLE `rating`;*/
 INSERT INTO `rating` (`id`, `value`) VALUES
    (1, 1)
 	,(2, 2)
@@ -106,7 +106,7 @@ INSERT INTO `rating` (`id`, `value`) VALUES
 	,(4, 4)
 	,(5, 5);
 
-TRUNCATE TABLE `activity`;
+/*TRUNCATE TABLE `activity`;*/
 INSERT INTO `activity` (`id`, `name`) VALUES
 	 (1,'Wandern')
 	,(2,'Klettern')
@@ -123,3 +123,17 @@ INSERT INTO `activity` (`id`, `name`) VALUES
 	,(13,'Langlaufen')
 	,(14,'Laufen')
 	,(15,'Walken');
+
+/*TRUNCATE TABLE `tour`;*/
+INSERT INTO `tour` (`id`, `name`, `description`, `date`, `duration`, `startlocation`, `image`, `userid`, `regionid`, `difficultyid`, `ratingid`, `activityid`) VALUES
+(1,'Stripsenkopf über Stripsenjochhaus','',20160403,0500,'Griesneralm Kaiserbachtal 6b, 6382 - Kirchdorf in Tirol','',1,1,3,5,1),
+(2,'Schlenken/Schmittenstein','',20160807,0300,'Gasthaus Zillreith  Spumberg 35, 5421 - Adnet','',1,4,3,4,1),
+(3,'Salzburger Hochtrohn über Toni Lenz Hütte','',2015-10-10,0400,'Parkplatz Marktschellenberg, 83487 - Marktschellenberg','',3,3,4,5,1),
+(4,'Dreisesselberg','',20150626,0500,'Bergkurgarten Bayerisch Gmain  Alpentalstraße 8, 83457 - Marktschellenberg','',4,3,3,2,1),
+(5,'Hoher Göll über Purtschellerhaus','',20170720,0800,'','',5,3,3,1,1),
+(6,'Watzmann','',20170615,1200,'','',6,3,5,3,1),
+(7,'Mondschein Rodeln','',20170820,0300,'Kelchalmparkplatz  Kelchalmstraße 5, 6371 - Aurach','',7,2,2,4,1),
+(8,'TransKitzAlp','',20170710,0200,'','',8,2,4,1,1),
+(9,'Schwarzseerun','',20170914,0100,'','',2,2,1,5,1),
+(10,'Rettensteinski','',20170710,0300,'Kasplatzl  Kasplatzlstraße 66, 6365 - Kirchberg in Tirol','',5,2,5,3,1),
+(11,'Aurachtal','',20170914,0200,'Kelchalmparkplatz  Kelchalmstraße 5, 6371 - Aurach','',3,2,3,4,1);
