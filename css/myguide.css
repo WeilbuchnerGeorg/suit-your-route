@@ -3,3 +3,8 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
+/* line 8, ../scss/myguide.scss */
+body {
+  background-color: #484848;
+  color: white;
+}
