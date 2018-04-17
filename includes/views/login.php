@@ -10,12 +10,12 @@ echo $this->header;
         <div class="col-md-3"></div>
         <div class="col-md-6">
 
-            <h1 class="col-xs-12">Login</h1>
-            <p class="col-xs-12">
+            <h1>Login</h1>
+            <p>
                 Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a>.
             </p>
 
-            <form method="post" action="login" class="">
+            <form method="post" action="login">
                 <?php if($this->errorPasswd == true): ?>
                     <div class="alert alert-danger alert-dismissible fade in" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
