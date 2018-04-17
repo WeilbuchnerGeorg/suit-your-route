@@ -40,14 +40,14 @@
       </div>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/myguide" <?php if($this->current == "index"): ?>class="active"<?php endif; ?>>Startseite</a></li>
+        <li><a href="index" <?php if($this->current == "index"): ?>class="active"<?php endif; ?>>Startseite</a></li>
         <?php if(LOGGED_IN == true): ?>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mein Profil <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="myguide_profil.html">Profil</a></li>
+              <li><a href="profile">Profil</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="logout.html">Logout</a></li>
+              <li><a href="logout">Logout</a></li>
             </ul>
           </li>
         <?php else: ?>

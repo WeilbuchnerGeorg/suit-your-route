@@ -137,3 +137,29 @@ INSERT INTO `tour` (`id`, `name`, `description`, `date`, `duration`, `startlocat
 (9,'Schwarzseerun','',20170914,0100,'','',2,2,1,5,1),
 (10,'Rettensteinski','',20170710,0300,'Kasplatzl  Kasplatzlstraße 66, 6365 - Kirchberg in Tirol','',5,2,5,3,1),
 (11,'Aurachtal','',20170914,0200,'Kelchalmparkplatz  Kelchalmstraße 5, 6371 - Aurach','',3,2,3,4,1);
+
+
+/*BaseProject Tables*/
+
+DROP TABLE IF EXISTS `address`;
+CREATE TABLE IF NOT EXISTS `address` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userId` int(10) unsigned NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `street` varchar(100) NOT NULL,
+  `zip` varchar(20) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `userId` (`userId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+TRUNCATE TABLE `address`;
+INSERT INTO `address` (`id`, `userId`, `firstname`, `lastname`, `street`, `zip`, `city`) VALUES
+(1, 5, 'Anton', 'Himbeer', 'Andreas-Hofer-Straße 7', '6330', 'Kufstein'),
+(2, 5, 'Georg', 'Erdbeer', 'Salzburger Straße 32', '6300', 'Wörgl'),
+(3, 5, 'Josef', 'Brombeer', 'Oskar Pirlo-Straße 7', '6330', 'Kufstein');
+
+ALTER TABLE `address`
+  ADD CONSTRAINT `address_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
