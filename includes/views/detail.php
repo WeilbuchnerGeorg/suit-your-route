@@ -13,7 +13,7 @@ echo $this->header;
 
       <div class="col-sm-8">
 
-        <h1>Detail ...</h1>
+        <h1><?php echo $this->tour->name; ?></h1>
 
       </div>
 
