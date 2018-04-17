@@ -52,7 +52,7 @@ echo $this->header;
                     <?php foreach($this->tours as $tours): ?>
                         <tr>
                             <td><?php echo $tours->id; ?></td>
-                            <td><?php echo $tours->name; ?></td>
+                            <td><a href="detail?id=<?php echo $tours->id; ?>"><?php echo $tours->name; ?></a></td>
                             <td><?php echo $tours->date; ?></td>
                             <td><button class="btn btn-default" data-toggle="modal" data-target="#editModal" data-id="<?php echo $tours->id; ?>"><i class="glyphicon glyphicon-pencil"></i> Bearbeiten</button></td>
                             <td><a class="btn btn-danger triggerDelete" href="api/address/" data-id="<?php echo $tours->id; ?>"><i class="glyphicon glyphicon-trash"></i> Löschen</a></td>
