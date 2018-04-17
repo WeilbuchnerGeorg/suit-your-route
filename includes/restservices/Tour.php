@@ -1,6 +1,6 @@
 <?php
 
-class Tours extends RESTClass
+class Tour extends RESTClass
 {
     private $Database = null;
 
