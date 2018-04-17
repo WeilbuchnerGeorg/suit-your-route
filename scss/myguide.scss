@@ -5,7 +5,40 @@
   padding-bottom: 20px;
 }*/
 
+$orange: #faad08;
+$orangehover: #ef7c15;
+
+
 body {
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 20px;
+
   //background-color: #484848;
   //color: white;
 }
+
+h1 {
+  font-weight: 700 !important;
+  font-size: 2em;
+}
+
+.btn {
+  background-color: $orange;
+  border: none;
+  background-image: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+
+  &::before {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $orangehover !important;
+    color: white;
+  }
+
+}
+
