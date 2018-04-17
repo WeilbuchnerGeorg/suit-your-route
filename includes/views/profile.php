@@ -6,22 +6,24 @@ echo $this->header;
     <div id="main">
 
         <div class="row">
+            <?php foreach($this->userdetails as $user): ?>
+                <div class="col-sm-4">
+                    <?php if($user->image): ?>
+                        <img class="img-responsive" src="<?php echo $user->image; ?>" />
+                    <?php else: ?>
+                        <img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=kein Bild" />
+                    <?php endif; ?>
+                </div>
 
-            <div class="col-sm-4">
+                <div class="col-sm-8">
 
-                <img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" />
-            </div>
-
-            <div class="col-sm-8">
-
-                <h1>Profil-Detail ...</h1>
-                <p>
-                    <strong>Vorname Nachname</strong><br />
-                    <strong>E-Mail Adresse:</strong> ...<br />
-                    <strong>Geburtsdatum:</strong> ...
-                </p>
-                <button class="btn btn-default" data-toggle="modal" data-target="#editModal"><i class="glyphicon glyphicon-pencil"></i> Profil bearbeiten</button>
-            </div>
+                        <h1>Profil-Detail: <?php echo $user->name; ?><br></h1>
+                        <p>
+                            <strong><?php echo $user->firstname; ?> <?php echo $user->lastname; ?></strong><br />
+                        </p>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#editModal"><i class="glyphicon glyphicon-pencil"></i> Profil bearbeiten</button>
+                </div>
+            <?php endforeach; ?>
         </div>
 
         <div class="row">

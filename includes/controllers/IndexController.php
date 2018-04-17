@@ -15,6 +15,7 @@ class IndexController extends Controller
 		$this->view->username = $this->user->username;
 
 		$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
-	}
+        $this->view->tours = TourModel::getTour();
+    }
 
 }

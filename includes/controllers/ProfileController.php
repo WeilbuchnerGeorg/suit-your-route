@@ -13,6 +13,7 @@ class ProfileController extends Controller
 
         $this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
         $this->view->tours = TourModel::getTourByUserId($this->user->id);
+        $this->view->userdetails = UserModel::getUserByUserId($this->user->id);
     }
 
 }

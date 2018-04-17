@@ -2,6 +2,27 @@
 
 class TourModel
 {
+    public static function getTour()
+    {
+        $db = new Database();
+
+        $sql = "SELECT * FROM tour";
+        $result = $db->query($sql);
+
+        if($db->numRows($result) > 0)
+        {
+            $toursArray = array();
+
+            while($row = $db->fetchObject($result))
+            {
+                $toursArray[] = $row;
+            }
+
+            return $toursArray;
+        }
+
+        return null;
+    }
     public static function getTourById($id)
     {
         $db = new Database();
