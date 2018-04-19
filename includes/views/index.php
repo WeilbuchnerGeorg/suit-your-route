@@ -35,114 +35,40 @@ echo $this->header;
             </div>
         </div>
 
-        <div class="row">
-
-            <?php if($this->tours): ?>
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Datum</th>
-                        <th>Bearbeiten</th>
-                        <th>Löschen</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach($this->tours as $tours): ?>
-                        <tr>
-                            <td><?php echo $tours->id; ?></td>
-                            <td><a href="detail?id=<?php echo $tours->id; ?>"><?php echo $tours->name; ?></a></td>
-                            <td><?php echo $tours->date; ?></td>
-                            <td><button class="btn btn-default" data-toggle="modal" data-target="#editModal" data-id="<?php echo $tours->id; ?>"><i class="glyphicon glyphicon-pencil"></i> Bearbeiten</button></td>
-                            <td><a class="btn btn-danger triggerDelete" href="api/address/" data-id="<?php echo $tours->id; ?>"><i class="glyphicon glyphicon-trash"></i> Löschen</a></td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
-            <?php else: ?>
-                <p>&nbsp;</p>
-                <div class="alert alert-info">Noch keine Touren vorhanden - Sie können über den Button <strong>Neue Tour anlegen</strong> eine neue Tour in Ihr Toursammlung hinzufügen.</div>
-            <?php endif; ?>
-
-            <div class="col-sm-6">
-
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
-                            <div class="col-md-8">Musterort<br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-6">
-
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
-                            <div class="col-md-8">Musterort<br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
-                        </div>
-                    </div>
-                </div>
-
+        
+        <?php if($this->tours): ?>
+          <?php
+          //Columns must be a factor of 12 (1,2,3,4,6,12)
+          $numOfCols = 2;
+          $rowCount = 0;
+          $bootstrapColWidth = 12 / $numOfCols;
+          ?>
+          <div class="row">
+          <?php
+          foreach ($this->tours as $tour){
+          ?>
+            <div class="col-md-<?php echo $bootstrapColWidth; ?>">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+                      <div class="row">
+                          <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
+                          <div class="col-md-8"><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a><br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
+                      </div>
+                  </div>
+              </div>
             </div>
 
-            <div class="col-sm-6">
+          <?php
+              $rowCount++;
+              if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
+          }
+          ?>
+          </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
-                            <div class="col-md-8">Musterort<br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-6">
-
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
-                            <div class="col-md-8">Musterort<br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-sm-6">
-
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
-                            <div class="col-md-8">Musterort<br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-6">
-
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
-                            <div class="col-md-8">Musterort<br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
+        <?php else: ?>
+          <p>&nbsp;</p>
+          <div class="alert alert-info">Noch keine Touren vorhanden - Sie können über den Button <strong>Neue Tour anlegen</strong> eine neue Tour in Ihr Toursammlung hinzufügen.</div>
+        <?php endif; ?>
 
 <?php
 
