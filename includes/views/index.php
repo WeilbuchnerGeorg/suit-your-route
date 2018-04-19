@@ -38,20 +38,17 @@ echo $this->header;
         
         <?php if($this->tours): ?>
           <?php
-          //Columns must be a factor of 12 (1,2,3,4,6,12)
-          $numOfCols = 2;
-          $rowCount = 0;
-          $bootstrapColWidth = 12 / $numOfCols;
+            $numOfCols = 2; // wanted number of bootstrap grid columns (1,2,3,4,6,12)
+            $rowCount = 0;
+            $bootstrapColWidth = 12 / $numOfCols; // calculate grid number
           ?>
           <div class="row">
-          <?php
-          foreach ($this->tours as $tour){
-          ?>
+          <?php foreach ($this->tours as $tour){ ?>
             <div class="col-md-<?php echo $bootstrapColWidth; ?>">
               <div class="panel panel-default">
                   <div class="panel-body">
                       <div class="row">
-                          <div class="col-md-4"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></div>
+                          <div class="col-md-4"><a href="detail?id=<?php echo $tour->id; ?>"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></a></div>
                           <div class="col-md-8"><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a><br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
                       </div>
                   </div>
