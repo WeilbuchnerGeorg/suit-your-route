@@ -3,40 +3,41 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
-/* line 19, ../scss/myguide.scss */
+/* line 23, ../scss/myguide.scss */
 body {
   font-family: Lato;
   font-weight: 300;
   font-size: 20px;
+  background-image: url("../img/headerbild_startseite.png");
 }
 
-/* line 28, ../scss/myguide.scss */
+/* line 34, ../scss/myguide.scss */
 h1 {
   font-weight: 700 !important;
   font-size: 2em;
 }
 
-/* line 36, ../scss/myguide.scss */
+/* line 42, ../scss/myguide.scss */
 .btn {
   background-color: #faad08;
   border: none;
   background-image: none;
+  margin: 1em 0;
   color: white;
   font-size: 1em;
   font-weight: 700;
-  margin: 1em 0;
 }
-/* line 45, ../scss/myguide.scss */
+/* line 53, ../scss/myguide.scss */
 .btn::before {
   display: none;
 }
-/* line 48, ../scss/myguide.scss */
+/* line 56, ../scss/myguide.scss */
 .btn:hover {
   background-color: #ef7c15 !important;
   color: white;
 }
 
-/* line 55, ../scss/myguide.scss */
+/* line 63, ../scss/myguide.scss */
 .col-sm-12 {
   padding: 3em 0;
 }

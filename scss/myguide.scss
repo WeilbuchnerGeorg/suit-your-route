@@ -5,6 +5,10 @@
   padding-bottom: 20px;
 }*/
 
+@mixin background ($imagepath:url) {
+  background-image: url($imagepath);
+}
+
 
 // color Button + Button Hover
 $orange: #faad08;
@@ -15,13 +19,15 @@ $orangehover: #ef7c15;
 //color: white;
 
 
-// Font Body
+// Anpassungen Body
 body {
   font: {
     family: Lato;
     weight: 300;
     size: 20px;
   }
+  @include background('../img/headerbild_startseite.png');
+
 }
 
 // Font H1-H... noch ergänzen
@@ -37,10 +43,12 @@ h1 {
   background-color: $orange;
   border: none;
   background-image: none;
-  color: white;
-  font-size: 1em;
-  font-weight: 700;
   margin: 1em 0;
+  color: white;
+  font: {
+    size: 1em;
+    weight: 700;
+  }
 
   &::before {
     display: none;
@@ -55,4 +63,5 @@ h1 {
 .col-sm-12 {
   padding: 3em 0;
 }
+
 
