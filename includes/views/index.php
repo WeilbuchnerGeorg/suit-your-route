@@ -7,6 +7,12 @@ echo $this->header;
 
 
     <div id="main">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Die beliebtesten Bergtouren auf MYGUIDE</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel panel-default">
@@ -20,7 +26,7 @@ echo $this->header;
                                 <option>Rofan</option>
                                 <option>Zillertal</option>
                             </select>
-                            <button type="submit" class="btn btn-default pull-right">Jetzt Touren suchen!</button>
+                            <button type="submit" class="btn pull-right">Jetzt Touren suchen!</button>
                         </div>
                     </div>
                 </div>

@@ -3,41 +3,46 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
-/* line 23, ../scss/myguide.scss */
+/*
+@mixin background ($imagepath:url) {
+  background-image: url($imagepath);
+}
+*/
+/* line 24, ../scss/myguide.scss */
 body {
   font-family: Lato;
   font-weight: 300;
   font-size: 20px;
-  background-image: url("../img/headerbild_startseite.png");
+  background: #333 url("../img/headerbild_startseite.png") no-repeat right top;
 }
 
-/* line 34, ../scss/myguide.scss */
+/* line 35, ../scss/myguide.scss */
 h1 {
   font-weight: 700 !important;
   font-size: 2em;
 }
 
-/* line 42, ../scss/myguide.scss */
+/* line 43, ../scss/myguide.scss */
 .btn {
   background-color: #faad08;
   border: none;
   background-image: none;
-  margin: 1em 0;
+  padding: .5em 1em;
   color: white;
   font-size: 1em;
   font-weight: 700;
 }
-/* line 53, ../scss/myguide.scss */
+/* line 54, ../scss/myguide.scss */
 .btn::before {
   display: none;
 }
-/* line 56, ../scss/myguide.scss */
+/* line 57, ../scss/myguide.scss */
 .btn:hover {
   background-color: #ef7c15 !important;
   color: white;
 }
 
-/* line 63, ../scss/myguide.scss */
+/* line 64, ../scss/myguide.scss */
 .col-sm-12 {
   padding: 3em 0;
 }

@@ -4,15 +4,16 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
-
+/*
 @mixin background ($imagepath:url) {
   background-image: url($imagepath);
 }
-
+*/
 
 // color Button + Button Hover
 $orange: #faad08;
 $orangehover: #ef7c15;
+$ausfuellhilfefontsize: .75em;
 
 
 //background-color: #484848;
@@ -26,7 +27,7 @@ body {
     weight: 300;
     size: 20px;
   }
-  @include background('../img/headerbild_startseite.png');
+  background: #333 url("../img/headerbild_startseite.png") no-repeat right top;
 
 }
 
@@ -43,7 +44,7 @@ h1 {
   background-color: $orange;
   border: none;
   background-image: none;
-  margin: 1em 0;
+  padding: .5em 1em;
   color: white;
   font: {
     size: 1em;
