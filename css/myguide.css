@@ -3,20 +3,20 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
-/* line 12, ../scss/myguide.scss */
+/* line 19, ../scss/myguide.scss */
 body {
   font-family: Lato;
   font-weight: 300;
   font-size: 20px;
 }
 
-/* line 21, ../scss/myguide.scss */
+/* line 28, ../scss/myguide.scss */
 h1 {
   font-weight: 700 !important;
   font-size: 2em;
 }
 
-/* line 26, ../scss/myguide.scss */
+/* line 36, ../scss/myguide.scss */
 .btn {
   background-color: #faad08;
   border: none;
@@ -24,13 +24,19 @@ h1 {
   color: white;
   font-size: 1em;
   font-weight: 700;
+  margin: 1em 0;
 }
-/* line 34, ../scss/myguide.scss */
+/* line 45, ../scss/myguide.scss */
 .btn::before {
   display: none;
 }
-/* line 38, ../scss/myguide.scss */
+/* line 48, ../scss/myguide.scss */
 .btn:hover {
   background-color: #ef7c15 !important;
   color: white;
+}
+
+/* line 55, ../scss/myguide.scss */
+.col-sm-12 {
+  padding: 3em 0;
 }
