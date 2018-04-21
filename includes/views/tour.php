@@ -2,24 +2,24 @@
     <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/tours/" class="col-xs-12">
 
         <div class="form-group">
-            <label for="firstname">Vorname:</label>
-            <input type="text" name="firstname" class="form-control" id="firstname" value="<?php echo $this->firstname; ?>">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control" id="name" value="<?php echo $this->name; ?>">
         </div>
         <div class="form-group">
-            <label for="lastname">Nachname:</label>
-            <input type="text" name="lastname" class="form-control" id="lastname" value="<?php echo $this->lastname; ?>">
+            <label for="description">Beschreibung:</label>
+            <input type="text" name="description" class="form-control" id="description" value="<?php echo $this->lastname; ?>">
         </div>
         <div class="form-group">
-            <label for="street">Straße</label>
-            <input type="text" class="form-control" name="street" id="street" value="<?php echo $this->street; ?>">
+            <label for="date">Datum:</label>
+            <input type="date" class="form-control" name="date" id="date" value="<?php echo $this->date; ?>">
         </div>
         <div class="form-group">
-            <label for="zip">PLZ:</label>
-            <input type="text" name="zip" class="form-control" id="zip" value="<?php echo $this->zip; ?>">
+            <label for="duration">Dauer:</label>
+            <input type="time" name="duration" class="form-control" id="duration" value="<?php echo $this->duration; ?>">
         </div>
         <div class="form-group">
-            <label for="city">Ort:</label>
-            <input type="text" name="city" class="form-control" id="city" value="<?php echo $this->city; ?>">
+            <label for="startlocation">Startort:</label>
+            <input type="text" name="startlocation" class="form-control" id="startlocation" value="<?php echo $this->startlocation; ?>">
         </div>
         <?php if($this->id): ?>
             <input type="hidden" name="id" value="<?php echo $this->id; ?>">
@@ -44,7 +44,7 @@
             that = editModal.find('.btn-primary').get(0);
         }
 
-        var requiredFields = ['#firstname', '#lastname', '#street', '#zip', '#city'];
+        var requiredFields = ['#name', '#description', '#date', '#duration', '#startlocation'];
 
         for(var i = 0; i < requiredFields.length; i++) {
             if($(requiredFields[i]).val() == '') {
