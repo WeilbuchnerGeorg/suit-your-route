@@ -10,7 +10,7 @@ echo $this->header;
 
         <div class="row">
             <div class="col-sm-6">
-                <h1>Finde jetzt deine nächste Bergtour</h1>
+                <h1 id="h1-index">Finde jetzt deine nächste Bergtour</h1>
             </div>
         </div>
         <div class="row">
@@ -53,7 +53,7 @@ echo $this->header;
                   <div class="panel-body">
                       <div class="row">
                           <div class="col-md-4"><a href="detail?id=<?php echo $tour->id; ?>"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></a></div>
-                          <div class="col-md-8"><h3><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a></h3><br/><p>Bewertung: <?php for ($i=0; $i < $tour->ratingid; $i++) {echo "<span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> ";} ?></p></div>
+                          <div class="col-md-8"><h4><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a></h4><br/><p>Bewertung: <?php for ($i=0; $i < $tour->ratingid; $i++) {echo "<span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> ";} ?></p></div>
                       </div>
                   </div>
               </div>
