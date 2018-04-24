@@ -25,7 +25,9 @@ class Tour extends RESTClass
                 $dataForView = TourModel::getTourById($data['id']);
 
                 $dataForView->regions = AttributeModel::getRegion();
-                //$dataForView->regions = AttributeModel::getRegion();
+                $dataForView->ratings = AttributeModel::getRating();
+                $dataForView->difficulties = AttributeModel::getDifficulty();
+                $dataForView->activities = AttributeModel::getActivity();
 
 
                 $user = new User();
@@ -69,6 +71,8 @@ class Tour extends RESTClass
         $error = false;
         $errorFields = array();
         $user = new User();
+
+
 
         foreach($requiredFields as $fieldname)
         {

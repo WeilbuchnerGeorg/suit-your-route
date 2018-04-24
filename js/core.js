@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
         var that = this;
 
 
-        var theTitle = "Neue Adresse anlegen";
+        var theTitle = "Neue Tour anlegen";
         var thePrimaryButton = "Hinzufügen";
         var apiRequestUrl = "api/tour/?returnView=true";
 
