@@ -10,16 +10,16 @@
             <input type="date" class="form-control" name="date" id="date" value="<?php echo $this->date; ?>">
         </div>
         <div class="form-group">
-            <label for="duration">Bewertung:</label>
-            <select class="form-control center-block">
+            <label for="ratingid">Bewertung:</label>
+            <select class="form-control center-block" name="ratingid" id="ratingid">
                 <?php foreach($this->ratings as $rating): ?>
                     <option value="<?php echo $rating->id; ?>"><?php echo $rating->value; ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
         <div class="form-group">
-            <label for="duration">Region:</label>
-            <select class="form-control center-block">
+            <label for="regionid">Region:</label>
+            <select class="form-control center-block" name="regionid" id="regionid">
                 <?php foreach($this->regions as $region): ?>
                     <option value="<?php echo $region->id; ?>"><?php echo $region->name; ?></option>
                 <?php endforeach; ?>
@@ -30,16 +30,16 @@
             <input type="text" name="startlocation" class="form-control" id="startlocation" value="<?php echo $this->startlocation; ?>">
         </div>
         <div class="form-group">
-            <label for="duration">Aktivität:</label>
-            <select class="form-control center-block">
+            <label for="activityid">Aktivität:</label>
+            <select class="form-control center-block" name="activityid" id="activityid">
                 <?php foreach($this->activities as $activity): ?>
                     <option value="<?php echo $activity->id; ?>"><?php echo $activity->name; ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
         <div class="form-group">
-            <label for="duration">Schwierigkeit:</label>
-            <select class="form-control center-block">
+            <label for="difficultyid">Schwierigkeit:</label>
+            <select class="form-control center-block" name="difficultyid" id="difficultyid">
                 <?php foreach($this->difficulties as $difficulty): ?>
                     <option value="<?php echo $difficulty->id; ?>"><?php echo $difficulty->name; ?></option>
                 <?php endforeach; ?>
