@@ -5,7 +5,7 @@ echo $this->header;
 ?>
 
 
-
+<div id="bg-index">
     <div id="main">
 
         <div class="row">
@@ -20,11 +20,9 @@ echo $this->header;
                         <div class="form-inline">
                             <label for="">Suche nach Touren in deiner Nähe</label>
                             <select class="form-control center-block">
-                                <option>Kufstein</option>
-                                <option>Wörgl</option>
-                                <option>Kitzbühel</option>
-                                <option>Rofan</option>
-                                <option>Zillertal</option>
+                                <?php foreach($this->regions as $region): ?>
+                                    <option value="<?php echo $region->id; ?>"><?php echo $region->name; ?></option>
+                                <?php endforeach; ?>
                             </select>
                             <button type="submit" class="btn pull-right">Jetzt Touren suchen!</button>
                         </div>
@@ -54,7 +52,7 @@ echo $this->header;
                   <div class="panel-body">
                       <div class="row">
                           <div class="col-md-4"><a href="detail?id=<?php echo $tour->id; ?>"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></a></div>
-                          <div class="col-md-8"><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a><br /><strong>Musterberg</strong><p>Bewertung: * * * * *</p></div>
+                          <div class="col-md-8"><strong><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a><br /></strong><p>Bewertung: <?php for ($i=0; $i < $tour->ratingid; $i++) {echo "<span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> ";} ?></p></div>
                       </div>
                   </div>
               </div>
@@ -71,7 +69,7 @@ echo $this->header;
           <p>&nbsp;</p>
           <div class="alert alert-info">Noch keine Touren vorhanden - Sie können über den Button <strong>Neue Tour anlegen</strong> eine neue Tour in Ihr Toursammlung hinzufügen.</div>
         <?php endif; ?>
-
+</div>
 <?php
 
 echo $this->footer;

@@ -26,11 +26,13 @@ class DetailController extends Controller
             else
             {
                 $this->view->tour = $tourObj;
+                $this->view->region = AttributeModel::getRegionById($tourObj->regionid);
+                $this->view->difficulty = AttributeModel::getDifficultyById($tourObj->difficultyid);
+                $this->view->activity = AttributeModel::getActivityById($tourObj->activityid);
             }
 
         }
 
-        //$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
     }
 
 }
