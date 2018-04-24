@@ -9,6 +9,7 @@
 // color Button + Button Hover
 $orange: #faad08;
 $orangehover: #ef7c15;
+$schriftgrau: rgb(51, 51, 51);
 $ausfuellhilfefontsize: .75em;
 
 
@@ -36,6 +37,7 @@ body {
     weight: 300;
     size: 20px;
   }
+  color: greenyellow;
   background: #333 url("../img/headerbild_startseite3.png") no-repeat center top;
 
 }
@@ -49,7 +51,14 @@ h1 {
   color: white;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+h2 {
+  color: white;
+}
 
+// suchpanel
+.form-inline {
+  color: $schriftgrau;
 }
 
 // default-button orange
@@ -78,6 +87,11 @@ h1 {
   padding: 3em 0;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+// Kurzübersicht-Panel
+.panel-body {
+  color: $schriftgrau;
 }
 
 
