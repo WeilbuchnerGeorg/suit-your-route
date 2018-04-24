@@ -29,7 +29,6 @@ class DetailController extends Controller
             }
 
         }
-
         //$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
     }
 
