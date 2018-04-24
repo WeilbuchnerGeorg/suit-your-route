@@ -27,6 +27,8 @@ class DetailController extends Controller
             {
                 $this->view->tour = $tourObj;
                 $this->view->region = AttributeModel::getRegionById($tourObj->regionid);
+                $this->view->difficulty = AttributeModel::getDifficultyById($tourObj->difficultyid);
+                $this->view->activity = AttributeModel::getActivityById($tourObj->activityid);
             }
 
         }

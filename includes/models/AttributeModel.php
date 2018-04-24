@@ -79,6 +79,20 @@ class AttributeModel
 
         return null;
     }
+    public static function getDifficultyById($id)
+    {
+        $db = new Database();
+        $sql = "SELECT * FROM difficulty WHERE id=".intval($id);
+
+        $result = $db->query($sql);
+
+        if($db->numRows($result) > 0)
+        {
+            return $db->fetchObject($result);
+        }
+
+        return null;
+    }
     public static function getActivity()
     {
         $db = new Database();
@@ -96,6 +110,20 @@ class AttributeModel
             }
 
             return $activitiesArray;
+        }
+
+        return null;
+    }
+    public static function getActivityById($id)
+    {
+        $db = new Database();
+        $sql = "SELECT * FROM activity WHERE id=".intval($id);
+
+        $result = $db->query($sql);
+
+        if($db->numRows($result) > 0)
+        {
+            return $db->fetchObject($result);
         }
 
         return null;
