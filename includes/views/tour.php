@@ -1,5 +1,5 @@
 <div class="row">
-    <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/tour/" class="col-xs-12">
+    <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/tour/" class="col-xs-12 tourform">
 
         <div class="form-group">
             <label for="name">Name:</label>
@@ -52,6 +52,10 @@
         <div class="form-group">
             <label for="description">Beschreibung:</label>
             <input type="text" name="description" class="form-control" id="description" value="<?php echo $this->lastname; ?>">
+        </div>
+        <div class="form-group">
+            <label for="description">Bild:</label>
+            <input type="file" name="fileToUpload" class="form-control" id="fileToUpload">
         </div>
         <?php if($this->id): ?>
             <input type="hidden" name="id" value="<?php echo $this->id; ?>">
