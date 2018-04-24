@@ -18,13 +18,20 @@ echo $this->header;
                 <div class="panel panel-default such-panel">
                     <div class="panel-body">
                         <div class="form-inline">
-                            <label for="">Suche nach Touren in deiner Nähe</label>
-                            <select class="form-control center-block">
-                                <?php foreach($this->regions as $region): ?>
-                                    <option value="<?php echo $region->id; ?>"><?php echo $region->name; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                            <button type="submit" class="btn pull-right">Jetzt Touren suchen!</button>
+                            <div class="pseudoTable">
+                                <div class="pseudoCell">
+                                    <label for="">Suche nach Touren in deiner Nähe</label>
+                                    <select class="form-control center-block">
+                                        <?php foreach($this->regions as $region): ?>
+                                            <option value="<?php echo $region->id; ?>"><?php echo $region->name; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="pseudoCell">
+                                    <button type="submit" class="btn pull-right">Jetzt Touren suchen!</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -41,28 +48,30 @@ echo $this->header;
 
         
         <?php if($this->tours): ?>
-          <?php
-            $numOfCols = 2; // wanted number of bootstrap grid columns (1,2,3,4,6,12)
-            $rowCount = 0;
-            $bootstrapColWidth = 12 / $numOfCols; // calculate grid number
-          ?>
+
           <div class="row">
-          <?php foreach ($this->tours as $tour){ ?>
-            <div class="col-md-<?php echo $bootstrapColWidth; ?>">
-              <div class="panel panel-default">
+          <?php foreach ($this->tours as $tour): ?>
+            <div class="col-md-6">
+                <a class="tourTeaser" href="detail?id=<?php echo $tour->id; ?>">
+                    <div class="image">
+                        <img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide">
+                    </div>
+                    <div class="text">
+                        <h4><?php echo $tour->name; ?></h4><br/><p>Bewertung: <?php for ($i=0; $i < $tour->ratingid; $i++): ?><span class="glyphicon glyphicon-star" aria-hidden="true"></span> <?php endfor; ?></p>
+                    </div>
+                </a>
+
+              <!--<div class="panel panel-default">
                   <div class="panel-body">
                       <div class="row">
                           <div class="col-md-4"><a href="detail?id=<?php echo $tour->id; ?>"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></a></div>
                           <div class="col-md-8"><h4><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a></h4><br/><p>Bewertung: <?php for ($i=0; $i < $tour->ratingid; $i++) {echo "<span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> ";} ?></p></div>
                       </div>
                   </div>
-              </div>
+              </div>-->
             </div>
-
           <?php
-              $rowCount++;
-              if($rowCount % $numOfCols == 0) echo '</div><div class="row">';
-          }
+          endforeach;
           ?>
           </div>
 

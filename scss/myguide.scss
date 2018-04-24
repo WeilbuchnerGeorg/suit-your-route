@@ -103,6 +103,16 @@ a {
 }
 
 
+.pseudoTable {
+  display:table;
+  width:100%;
+}
+
+.pseudoCell {
+  display:table-cell;
+  vertical-align:middle;
+}
+
 
 // default-button orange
 .btn {
@@ -144,4 +154,24 @@ a {
   color: $schriftgrau;
 }
 
+.tourTeaser {
+  background-color:#fff;
+  display:inline-block;
 
+  .image {
+    width:33%;
+    float:left;
+  }
+
+  .text {
+    width:67%;
+    float:left;
+  }
+
+  &::after {
+    content:"";
+    clear:both;
+    display:block;
+  }
+
+}
