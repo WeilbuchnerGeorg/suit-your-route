@@ -14,8 +14,16 @@ class IndexController extends Controller
 		$this->view->title = "Übersicht";
 		$this->view->username = $this->user->username;
 
-		$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
-        $this->view->tours = TourModel::getTour();
+        if(isset($_GET['region']) && $_GET['region'] != '')
+        {
+            //schau ob es die region gibt
+            $this->view->tours = TourModel::getToursByRegion($_GET['region']);
+
+        }
+        else
+        {
+            $this->view->tours = TourModel::getTour();
+        }
         $this->view->regions = AttributeModel::getRegion();
     }
 

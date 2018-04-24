@@ -23,6 +23,11 @@ class Tour extends RESTClass
             if(isset($data['id']))
             {
                 $dataForView = TourModel::getTourById($data['id']);
+
+                $dataForView->regions = AttributeModel::getRegion();
+                //$dataForView->regions = AttributeModel::getRegion();
+
+
                 $user = new User();
 
                 if($dataForView->userid = $user->id)
@@ -158,7 +163,7 @@ class Tour extends RESTClass
         {
             $tourObj = TourModel::getTourById($data['id']);
 
-            if($tourObj->userId != $user->id)
+            if($tourObj->userid != $user->id)
             {
                 $jsonResponse = new JSON();
                 $jsonResponse->result = false;

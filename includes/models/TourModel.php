@@ -38,6 +38,29 @@ class TourModel
         return null;
     }
 
+    public static function getToursByRegion($regionId)
+    {
+        $db = new Database();
+        $sql = "SELECT * FROM tour WHERE regionid=".intval($regionId);
+
+        $result = $db->query($sql);
+
+        if($db->numRows($result) > 0)
+        {
+            $tours = array();
+
+            while($row = $db->fetchObject($result))
+            {
+                $tours[] = $row;
+            }
+
+            return $tours;
+        }
+
+        return null;
+    }
+
+
     public static function getTourByUserId($userId)
     {
         $db = new Database();

@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
 
         var theTitle = "Neue Adresse anlegen";
         var thePrimaryButton = "Hinzufügen";
-        var apiRequestUrl = "api/address/?returnView=true";
+        var apiRequestUrl = "api/tour/?returnView=true";
 
         if(typeof addressId !== "undefined")
         {
