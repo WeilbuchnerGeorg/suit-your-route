@@ -196,8 +196,10 @@ class User extends Database
 
 		$username = $db->escapeString($data['username']);
 		$password = password_hash($db->escapeString($data['password']), PASSWORD_BCRYPT);
+        $firstname = $db->escapeString($data['firstname']);
+        $lastname = $db->escapeString($data['lastname']);
 
-		$sql = "INSERT INTO `user`(`name`,`password`) VALUES('".$username."','".$password."')";
+		$sql = "INSERT INTO `user`(`name`,`password`,`firstname`,`lastname`) VALUES('".$username."','".$password."','".$firstname."','".$lastname."')";
 		$db->query($sql);
 	}
 

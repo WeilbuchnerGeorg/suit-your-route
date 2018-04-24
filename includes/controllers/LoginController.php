@@ -68,6 +68,8 @@ class LoginController extends Controller
 			{
 				$password = $_POST['pwd'];
 				$username = $_POST['name'];
+                $firstname = $_POST['firstname'];
+                $lastname = $_POST['lastname'];
 
 				if(strlen($password) < 8) //check if password is long enough
 				{
@@ -85,7 +87,7 @@ class LoginController extends Controller
 					//check if username exists already...
 					if(User::existsWithUsername($username) == false)
 					{
-						User::createUser(array('username' => $username, 'password' => $password));
+						User::createUser(array('username' => $username, 'password' => $password, 'firstname' => $firstname, 'lastname' => $lastname));
 
 						$jsonResponse = new JSON();
 						$jsonResponse->result = true;
