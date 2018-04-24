@@ -3,12 +3,18 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
-/*
-@mixin background ($imagepath:url) {
-  background-image: url($imagepath);
+/* line 20, ../scss/myguide.scss */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  border: none !important;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: .75em;
 }
-*/
-/* line 24, ../scss/myguide.scss */
+
+/* line 34, ../scss/myguide.scss */
 body {
   font-family: Lato;
   font-weight: 300;
@@ -16,13 +22,13 @@ body {
   background: #333 url("../img/headerbild_startseite.png") no-repeat right top;
 }
 
-/* line 35, ../scss/myguide.scss */
+/* line 45, ../scss/myguide.scss */
 h1 {
   font-weight: 700 !important;
   font-size: 2em;
 }
 
-/* line 43, ../scss/myguide.scss */
+/* line 53, ../scss/myguide.scss */
 .btn {
   background-color: #faad08;
   border: none;
@@ -32,17 +38,17 @@ h1 {
   font-size: 1em;
   font-weight: 700;
 }
-/* line 54, ../scss/myguide.scss */
+/* line 64, ../scss/myguide.scss */
 .btn::before {
   display: none;
 }
-/* line 57, ../scss/myguide.scss */
+/* line 67, ../scss/myguide.scss */
 .btn:hover {
   background-color: #ef7c15 !important;
   color: white;
 }
 
-/* line 64, ../scss/myguide.scss */
+/* line 74, ../scss/myguide.scss */
 .col-sm-12 {
   padding: 3em 0;
 }

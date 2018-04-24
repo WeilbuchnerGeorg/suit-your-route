@@ -4,11 +4,7 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
-/*
-@mixin background ($imagepath:url) {
-  background-image: url($imagepath);
-}
-*/
+
 
 // color Button + Button Hover
 $orange: #faad08;
@@ -19,6 +15,20 @@ $ausfuellhilfefontsize: .75em;
 //background-color: #484848;
 //color: white;
 
+// Anpassungen Menü
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  border: none !important;
+  border-radius: 0;
+  font: {
+    weight: 700;
+    size: .75em;
+  }
+
+}
 
 // Anpassungen Body
 body {
