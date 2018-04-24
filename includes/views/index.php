@@ -10,12 +10,12 @@ echo $this->header;
 
         <div class="row">
             <div class="col-sm-6">
-                <h1>Die beliebtesten Bergtouren auf MYGUIDE</h1>
+                <h1>Finde jetzt deine nächste Bergtour</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="panel panel-default">
+                <div class="panel panel-default such-panel">
                     <div class="panel-body">
                         <div class="form-inline">
                             <label for="">Suche nach Touren in deiner Nähe</label>
@@ -33,8 +33,9 @@ echo $this->header;
 
         <div class="row">
             <div class="col-sm-12">
+                <h2>Die beliebtesten Bergtouren auf MYGUIDE</h2>
                 <p>Du bist noch ratlos, wo es als nächstes hingehen könnte?<br />Kein Problem, wir haben die beliebtesten Wanderungen unserer User für dich zusammengestellt.</p>
-                <button class="btn" data-toggle="modal" data-target="#editModal">Neue Tour anlegen</button>
+                <button class="btn-intext" data-toggle="modal" data-target="#editModal">Neue Tour anlegen</button>
             </div>
         </div>
 
@@ -52,7 +53,7 @@ echo $this->header;
                   <div class="panel-body">
                       <div class="row">
                           <div class="col-md-4"><a href="detail?id=<?php echo $tour->id; ?>"><img class="img-responsive" src="https://dummyimage.com/500/ccc/000.jpg&text=myguide" /></a></div>
-                          <div class="col-md-8"><strong><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a><br /></strong><p>Bewertung: <?php for ($i=0; $i < $tour->ratingid; $i++) {echo "<span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> ";} ?></p></div>
+                          <div class="col-md-8"><h3><a href="detail?id=<?php echo $tour->id; ?>"><?php echo $tour->name; ?></a></h3><br/><p>Bewertung: <?php for ($i=0; $i < $tour->ratingid; $i++) {echo "<span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> ";} ?></p></div>
                       </div>
                   </div>
               </div>
