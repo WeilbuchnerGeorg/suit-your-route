@@ -1,5 +1,5 @@
 <div class="row">
-    <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/tour/" class="col-xs-12 tourform">
+    <form method="<?php if($this->id): ?>put<?php else: ?>post<?php endif; ?>" action="api/tour/" class="col-xs-12 tourform" enctype="multipart/form-data">
 
         <div class="form-group">
             <label for="name">Name:</label>
