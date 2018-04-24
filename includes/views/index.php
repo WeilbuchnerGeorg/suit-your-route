@@ -35,7 +35,6 @@ echo $this->header;
 
         <div class="row">
             <div class="col-sm-12">
-                <h1>Die beliebtesten Bergtouren auf MYGUIDE</h1>
                 <p>Du bist noch ratlos, wo es als nächstes hingehen könnte?<br />Kein Problem, wir haben die beliebtesten Wanderungen unserer User für dich zusammengestellt.</p>
                 <button class="btn" data-toggle="modal" data-target="#editModal">Neue Tour anlegen</button>
             </div>
