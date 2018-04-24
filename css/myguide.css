@@ -170,6 +170,6 @@ a {
 }
 
 /* line 192, ../scss/myguide.scss */
-.tourform {
-  label: #333333;
+.tourform label {
+  color: #333333;
 }
