@@ -20,11 +20,9 @@ echo $this->header;
                         <div class="form-inline">
                             <label for="">Suche nach Touren in deiner Nähe</label>
                             <select class="form-control center-block">
-                                <option>Kufstein</option>
-                                <option>Wörgl</option>
-                                <option>Kitzbühel</option>
-                                <option>Rofan</option>
-                                <option>Zillertal</option>
+                                <?php foreach($this->regions as $region): ?>
+                                    <option value="<?php echo $region->id; ?>"><?php echo $region->name; ?></option>
+                                <?php endforeach; ?>
                             </select>
                             <button type="submit" class="btn pull-right">Jetzt Touren suchen!</button>
                         </div>

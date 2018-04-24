@@ -16,6 +16,7 @@ class IndexController extends Controller
 
 		$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
         $this->view->tours = TourModel::getTour();
+        $this->view->regions = AttributeModel::getRegion();
     }
 
 }
