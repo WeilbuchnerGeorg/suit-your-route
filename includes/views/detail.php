@@ -25,6 +25,7 @@ echo $this->header;
         <h2>Rating</h2>
         <p>Lorem ipsum ...</p>
         <h2>Daten</h2>
+        <p><strong>Region: </strong> <?php echo $this->region->name; ?></p>
         <p><strong>Aktivität: </strong> wandern</p>
         <p><strong>Dauer: </strong> 02:00</p>
         <p>... weiteres ....</p>

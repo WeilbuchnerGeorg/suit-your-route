@@ -26,10 +26,11 @@ class DetailController extends Controller
             else
             {
                 $this->view->tour = $tourObj;
+                $this->view->region = AttributeModel::getRegionById($tourObj->regionid);
             }
 
         }
-        //$this->view->addresses = AddressModel::getAddressesByUserId($this->user->id);
+
     }
 
 }
