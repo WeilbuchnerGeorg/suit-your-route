@@ -12,8 +12,8 @@
         <div class="form-group">
             <label for="duration">Bewertung:</label>
             <select class="form-control center-block">
-                <?php foreach($this->rating as $rating): ?>
-                    <option value="<?php echo $rating->id; ?>"><?php echo $region->value; ?></option>
+                <?php foreach($this->ratings as $rating): ?>
+                    <option value="<?php echo $rating->id; ?>"><?php echo $rating->value; ?></option>
                 <?php endforeach; ?>
             </select>
         </div>

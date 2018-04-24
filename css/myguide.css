@@ -86,7 +86,19 @@ a {
   margin-top: 3.5em;
 }
 
-/* line 108, ../scss/myguide.scss */
+/* line 106, ../scss/myguide.scss */
+.pseudoTable {
+  display: table;
+  width: 100%;
+}
+
+/* line 111, ../scss/myguide.scss */
+.pseudoCell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 118, ../scss/myguide.scss */
 .btn, .btn-intext {
   background-color: #faad08;
   border: none;
@@ -97,23 +109,23 @@ a {
   font-size: 1em;
   font-weight: 700;
 }
-/* line 120, ../scss/myguide.scss */
+/* line 130, ../scss/myguide.scss */
 .btn::before, .btn-intext::before {
   display: none;
 }
-/* line 123, ../scss/myguide.scss */
+/* line 133, ../scss/myguide.scss */
 .btn:hover, .btn-intext:hover {
   background-color: #ef7c15 !important;
   color: white;
 }
 
-/* line 128, ../scss/myguide.scss */
+/* line 138, ../scss/myguide.scss */
 .btn-intext {
   margin-top: 1.5em;
   margin-bottom: 2em;
 }
 
-/* line 135, ../scss/myguide.scss */
+/* line 145, ../scss/myguide.scss */
 .col-sm-12 {
   padding: 1em 0;
   margin-left: 15px;
@@ -121,7 +133,29 @@ a {
   width: 97%;
 }
 
-/* line 143, ../scss/myguide.scss */
+/* line 153, ../scss/myguide.scss */
 .panel-body {
   color: #333333;
+}
+
+/* line 157, ../scss/myguide.scss */
+.tourTeaser {
+  background-color: #fff;
+  display: inline-block;
+}
+/* line 161, ../scss/myguide.scss */
+.tourTeaser .image {
+  width: 33%;
+  float: left;
+}
+/* line 166, ../scss/myguide.scss */
+.tourTeaser .text {
+  width: 67%;
+  float: left;
+}
+/* line 171, ../scss/myguide.scss */
+.tourTeaser::after {
+  content: "";
+  clear: both;
+  display: block;
 }
