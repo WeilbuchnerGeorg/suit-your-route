@@ -35,8 +35,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index">
-          myguide
+        <a class="navbar-brand" href="index"><img src="img/logo_MyGuide_223x28px.png">
         </a>
       </div>
       

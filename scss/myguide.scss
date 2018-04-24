@@ -9,7 +9,7 @@
 // color Button + Button Hover
 $orange: #faad08;
 $orangehover: #ef7c15;
-$schriftgrau: rgb(51, 51, 51);
+$schriftgrau: #333333;
 $ausfuellhilfefontsize: .75em;
 
 
@@ -31,9 +31,14 @@ $ausfuellhilfefontsize: .75em;
 }
 .footer-nav {
   color: white !important;
-
 }
 
+#bg-index {
+  background: #333 url("../img/headerbild_startseite3.png") no-repeat center top;
+}
+#bg-detail {
+  background-color: #333;
+}
 // Anpassungen Body
 body {
   font: {
@@ -42,8 +47,6 @@ body {
     size: 20px;
   }
   color: white;
-  background: #333 url("../img/headerbild_startseite3.png") no-repeat center top;
-
 }
 
 // Font H1-H... noch ergänzen

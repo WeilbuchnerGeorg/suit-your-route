@@ -19,58 +19,67 @@
   color: white !important;
 }
 
-/* line 38, ../scss/myguide.scss */
+/* line 36, ../scss/myguide.scss */
+#bg-index {
+  background: #333 url("../img/headerbild_startseite3.png") no-repeat center top;
+}
+
+/* line 39, ../scss/myguide.scss */
+#bg-detail {
+  background-color: #333;
+}
+
+/* line 43, ../scss/myguide.scss */
 body {
   font-family: Lato;
   font-weight: 300;
   font-size: 20px;
   color: white;
-  background: #333 url("../img/headerbild_startseite3.png") no-repeat center top;
 }
 
-/* line 51, ../scss/myguide.scss */
+/* line 54, ../scss/myguide.scss */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 700;
   font-color: white;
 }
 
-/* line 57, ../scss/myguide.scss */
+/* line 60, ../scss/myguide.scss */
 h1 {
   font-size: 2.5em;
   padding-top: 1.5em;
   padding-bottom: 2em;
 }
 
-/* line 64, ../scss/myguide.scss */
+/* line 67, ../scss/myguide.scss */
 h2 {
   font-size: 1.75em;
   margin-bottom: .5em;
 }
 
-/* line 70, ../scss/myguide.scss */
+/* line 73, ../scss/myguide.scss */
 h3 {
   color: #333333 !important;
   font-size: 1em !important;
   margin: 0;
 }
 
-/* line 78, ../scss/myguide.scss */
+/* line 81, ../scss/myguide.scss */
 a {
   color: #333333 !important;
   text-decoration: none !important;
 }
 
-/* line 84, ../scss/myguide.scss */
+/* line 87, ../scss/myguide.scss */
 .form-inline {
   color: #333333;
 }
 
-/* line 87, ../scss/myguide.scss */
+/* line 90, ../scss/myguide.scss */
 .such-panel {
   margin-top: 3.5em;
 }
 
-/* line 94, ../scss/myguide.scss */
+/* line 97, ../scss/myguide.scss */
 .btn, .btn-intext {
   background-color: #faad08;
   border: none;
@@ -81,23 +90,23 @@ a {
   font-size: 1em;
   font-weight: 700;
 }
-/* line 106, ../scss/myguide.scss */
+/* line 109, ../scss/myguide.scss */
 .btn::before, .btn-intext::before {
   display: none;
 }
-/* line 109, ../scss/myguide.scss */
+/* line 112, ../scss/myguide.scss */
 .btn:hover, .btn-intext:hover {
   background-color: #ef7c15 !important;
   color: white;
 }
 
-/* line 114, ../scss/myguide.scss */
+/* line 117, ../scss/myguide.scss */
 .btn-intext {
   margin-top: 1.5em;
   margin-bottom: 2em;
 }
 
-/* line 121, ../scss/myguide.scss */
+/* line 124, ../scss/myguide.scss */
 .col-sm-12 {
   padding: 1em 0;
   margin-left: 15px;
@@ -105,7 +114,7 @@ a {
   width: 97%;
 }
 
-/* line 129, ../scss/myguide.scss */
+/* line 132, ../scss/myguide.scss */
 .panel-body {
   color: #333333;
 }
