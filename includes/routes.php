@@ -16,3 +16,6 @@ $route['/profile.html'] = array('controller' => 'ProfileController', 'uniqueName
 
 $route['/detail'] = array('controller' => 'DetailController', 'uniqueName' => 'detail');
 $route['/detail.html'] = array('controller' => 'DetailController', 'uniqueName' => 'detail');
+
+$route['/impressum'] = array('controller' => 'ImpressumController', 'uniqueName' => 'impressum');
+$route['/impressum.html'] = array('controller' => 'ImpressumController', 'uniqueName' => 'impressum');
