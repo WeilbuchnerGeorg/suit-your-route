@@ -11,6 +11,7 @@ $orange: #faad08;
 $orangehover: #ef7c15;
 $schriftgrau: #333333;
 $ausfuellhilfefontsize: .75em;
+$borderradius: 8px;
 
 
 //background-color: #484848;
@@ -100,6 +101,7 @@ a {
 }
 .such-panel {
   margin-top: 3.5em;
+  border-radius: $borderradius;
 }
 
 
@@ -157,15 +159,24 @@ a {
 .tourTeaser {
   background-color:#fff;
   display:inline-block;
+  border-radius: $borderradius;
+  margin-bottom: 25px;
 
   .image {
     width:33%;
     float:left;
   }
 
+.img-responsive {
+  border-bottom-left-radius: $borderradius;
+  border-top-left-radius: $borderradius;
+}
+
   .text {
     width:67%;
     float:left;
+    padding: 20px;
+
   }
 
   &::after {
@@ -174,4 +185,10 @@ a {
     display:block;
   }
 
+}
+
+// tabellentext
+
+.tourform {
+  label: $schriftgrau
 }

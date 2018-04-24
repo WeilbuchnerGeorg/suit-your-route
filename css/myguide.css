@@ -3,7 +3,7 @@
   padding-top: 50px;
   padding-bottom: 20px;
 }*/
-/* line 21, ../scss/myguide.scss */
+/* line 22, ../scss/myguide.scss */
 .navbar {
   position: fixed;
   width: 100%;
@@ -14,17 +14,17 @@
   font-size: .75em;
 }
 
-/* line 32, ../scss/myguide.scss */
+/* line 33, ../scss/myguide.scss */
 .footer-nav {
   color: white !important;
 }
 
-/* line 36, ../scss/myguide.scss */
+/* line 37, ../scss/myguide.scss */
 #bg-index {
   background: url("../img/headerbild_startseite3.png") no-repeat center top;
 }
 
-/* line 41, ../scss/myguide.scss */
+/* line 42, ../scss/myguide.scss */
 body {
   font-family: Lato;
   font-weight: 300;
@@ -33,72 +33,73 @@ body {
   background-color: #333;
 }
 
-/* line 53, ../scss/myguide.scss */
+/* line 54, ../scss/myguide.scss */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 700;
   font-color: white;
 }
 
-/* line 59, ../scss/myguide.scss */
+/* line 60, ../scss/myguide.scss */
 h1 {
   font-size: 2.5em;
   padding-top: 1.5em;
   padding-bottom: 1em;
 }
 
-/* line 66, ../scss/myguide.scss */
+/* line 67, ../scss/myguide.scss */
 #h1-index {
   padding-bottom: 2em !important;
 }
 
-/* line 69, ../scss/myguide.scss */
+/* line 70, ../scss/myguide.scss */
 h2 {
   font-size: 1.75em;
   margin-bottom: .5em;
 }
 
-/* line 75, ../scss/myguide.scss */
+/* line 76, ../scss/myguide.scss */
 h3 {
   font-size: 1.2em !important;
   margin: 0;
 }
 
-/* line 81, ../scss/myguide.scss */
+/* line 82, ../scss/myguide.scss */
 h4 {
   color: #333333 !important;
   font-size: 1em !important;
   margin: 0;
 }
 
-/* line 89, ../scss/myguide.scss */
+/* line 90, ../scss/myguide.scss */
 a {
   color: #333333 !important;
   text-decoration: none !important;
 }
 
-/* line 98, ../scss/myguide.scss */
+/* line 99, ../scss/myguide.scss */
 .form-inline {
   color: #333333;
 }
 
-/* line 101, ../scss/myguide.scss */
+/* line 102, ../scss/myguide.scss */
 .such-panel {
   margin-top: 3.5em;
+  border-radius: 8px;
 }
 
-/* line 106, ../scss/myguide.scss */
+/* line 108, ../scss/myguide.scss */
 .pseudoTable {
   display: table;
   width: 100%;
 }
 
-/* line 111, ../scss/myguide.scss */
+/* line 113, ../scss/myguide.scss */
 .pseudoCell {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 118, ../scss/myguide.scss */
+/* line 120, ../scss/myguide.scss */
 .btn, .btn-intext {
   background-color: #faad08;
   border: none;
@@ -109,23 +110,23 @@ a {
   font-size: 1em;
   font-weight: 700;
 }
-/* line 130, ../scss/myguide.scss */
+/* line 132, ../scss/myguide.scss */
 .btn::before, .btn-intext::before {
   display: none;
 }
-/* line 133, ../scss/myguide.scss */
+/* line 135, ../scss/myguide.scss */
 .btn:hover, .btn-intext:hover {
   background-color: #ef7c15 !important;
   color: white;
 }
 
-/* line 138, ../scss/myguide.scss */
+/* line 140, ../scss/myguide.scss */
 .btn-intext {
   margin-top: 1.5em;
   margin-bottom: 2em;
 }
 
-/* line 145, ../scss/myguide.scss */
+/* line 147, ../scss/myguide.scss */
 .col-sm-12 {
   padding: 1em 0;
   margin-left: 15px;
@@ -133,29 +134,42 @@ a {
   width: 97%;
 }
 
-/* line 153, ../scss/myguide.scss */
+/* line 155, ../scss/myguide.scss */
 .panel-body {
   color: #333333;
 }
 
-/* line 157, ../scss/myguide.scss */
+/* line 159, ../scss/myguide.scss */
 .tourTeaser {
   background-color: #fff;
   display: inline-block;
+  border-radius: 8px;
+  margin-bottom: 25px;
 }
-/* line 161, ../scss/myguide.scss */
+/* line 165, ../scss/myguide.scss */
 .tourTeaser .image {
   width: 33%;
   float: left;
 }
-/* line 166, ../scss/myguide.scss */
+/* line 170, ../scss/myguide.scss */
+.tourTeaser .img-responsive {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+/* line 175, ../scss/myguide.scss */
 .tourTeaser .text {
   width: 67%;
   float: left;
+  padding: 20px;
 }
-/* line 171, ../scss/myguide.scss */
+/* line 182, ../scss/myguide.scss */
 .tourTeaser::after {
   content: "";
   clear: both;
   display: block;
+}
+
+/* line 192, ../scss/myguide.scss */
+.tourform {
+  label: #333333;
 }
