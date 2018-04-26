@@ -51,7 +51,7 @@
         </div>
         <div class="form-group">
             <label for="description">Beschreibung:</label>
-            <input type="text" name="description" class="form-control" id="description" value="<?php echo $this->lastname; ?>">
+            <input type="text" name="description" class="form-control" id="description" value="<?php echo $this->description; ?>">
         </div>
         <div class="form-group">
             <label for="description">Bild:</label>

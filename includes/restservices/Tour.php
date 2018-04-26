@@ -106,7 +106,7 @@ class Tour extends RESTClass
 
     protected function saveRequest($data)
     {
-        $requiredFields = array('name', 'description', 'userid', 'regionid', 'difficultyid', 'ratingid','activityid');
+        $requiredFields = array('name', 'description', 'regionid', 'difficultyid', 'ratingid','activityid');
 
         $error = false;
         $errorFields = array();
@@ -125,7 +125,7 @@ class Tour extends RESTClass
         {
             $tourObj = TourModel::getTourById($data['id']);
 
-            if($tourObj->userId != $user->id)
+            if($tourObj->userid != $user->id)
             {
                 $jsonResponse = new JSON();
                 $jsonResponse->result = false;

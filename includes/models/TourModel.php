@@ -87,7 +87,7 @@ class TourModel
     {
         $db = new Database();
 
-        $sql = "INSERT INTO tour(name,description,date,duration,startlocation,image,userid,regionid,difficultyid,ratingid,activityid) VALUES('".$db->escapeString($data['userId'])."','".$db->escapeString($data['firstname'])."','".$db->escapeString($data['lastname'])."','".$db->escapeString($data['street'])."','".$db->escapeString($data['zip'])."','".$db->escapeString($data['city'])."')";
+        $sql = "INSERT INTO tour(name,description,date,duration,startlocation,image,userid,regionid,difficultyid,ratingid,activityid) VALUES('".$db->escapeString($data['name'])."','".$db->escapeString($data['description'])."','".$db->escapeString($data['date'])."','".$db->escapeString($data['duration'])."','".$db->escapeString($data['startlocation'])."','".$db->escapeString($data['image'])."','".$db->escapeString($data['userid'])."','".$db->escapeString($data['regionid'])."','".$db->escapeString($data['difficultyid'])."','".$db->escapeString($data['ratingid'])."','".$db->escapeString($data['activityid'])."')";
         $db->query($sql);
 
         $data['id'] = $db->insertId();
@@ -99,7 +99,7 @@ class TourModel
     {
         $db = new Database();
 
-        $sql = "UPDATE tour SET firstname='".$db->escapeString($data['firstname'])."',lastname='".$db->escapeString($data['lastname'])."',street='".$db->escapeString($data['street'])."',zip='".$db->escapeString($data['zip'])."',city='".$db->escapeString($data['city'])."' WHERE id=".intval($data['id']);
+        $sql = "UPDATE tour SET name='".$db->escapeString($data['name'])."',description='".$db->escapeString($data['description'])."',date='".$db->escapeString($data['date'])."',duration='".$db->escapeString($data['duration'])."',startlocation='".$db->escapeString($data['startlocation'])."',image='".$db->escapeString($data['image'])."',regionid='".$db->escapeString($data['regionid'])."',difficultyid='".$db->escapeString($data['difficultyid'])."',ratingid='".$db->escapeString($data['ratingid'])."',activityid='".$db->escapeString($data['activityid'])."' WHERE id=".intval($data['id']);
         $db->query($sql);
 
         return (object) $data;
